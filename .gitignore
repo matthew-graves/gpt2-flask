@@ -1,4 +1,8 @@
-models/*
 env*
 __pycache__*
 .vscode*
+# exclude everything
+models/*
+
+# exception to the rule
+!models/.gitkeep 
