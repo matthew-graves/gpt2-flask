@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, flash
 from config import Config
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
-from websample import run_model
+from web_model_generator import run_model
 
 DEBUG = True
 app = Flask(__name__)

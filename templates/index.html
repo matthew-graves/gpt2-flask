@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bootstrap Template | Design Studio</title>
+    <title>GPT-2 AI</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/favicons/apple-icon-57x57.png') }}">
@@ -37,13 +38,14 @@
         <section id="HeroBanner">
             <div class="hero-content">
                 <h1>Welcome to the world of GPT-2</h1>
-                <p style="color:FFFFFF">Enter a writing prompt in the field below</p>
+                <h2 style="color:#FFFFFF">rev 0.02a</h2>
+                <p style="color:#FFFFFF">Enter a writing prompt in the field below</p>
                 <form method="POST" action="/">
-                    {{ form.prompt.label }} {{ form.prompt(size=50) }}
-                    <br/>
-                    <input type="submit" value="Let the magic happen">
+                    <div stype="width: 50%">
+                    {{ form.prompt.label }} {{ form.prompt }}    <input type="submit" value="Let the magic happen">
+                </div>
                     {% autoescape false %}
-                        <p style="color:FFFFFF;size:12px">{{result_text}}</p>
+                        <p style="color:#FFFFFF;size:12px">{{result_text}}</p>
                     {% endautoescape %}
                 </form>
             </div>
