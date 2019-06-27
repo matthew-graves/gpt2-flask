@@ -1,6 +1,8 @@
 # gpt2-flask
 Nonsense Flask App for GPT-2 Phrase Generator
 
+This app uses code from openAI's GPT-2 source repo. 
+
 **Instructions for use:**
 
 Recommend using virtualenv over systemwide installs
