@@ -7,7 +7,7 @@ Recommend using virtualenv over systemwide installs
 
 **Create Virtual Environment:**
 
-Create new venv with python3 -m venv "environment name"
+python3 -m venv "environment name"
 
 **Activate Virtual Env:**
 
