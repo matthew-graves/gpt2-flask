@@ -39,7 +39,7 @@
                 <h1>Welcome to the world of GPT-2</h1>
                 <p style="color:FFFFFF">Enter a writing prompt in the field below</p>
                 <form method="POST" action="/">
-                    {{ form.prompt.label }} {{ form.prompt(size=100) }}
+                    {{ form.prompt.label }} {{ form.prompt(size=50) }}
                     <br/>
                     <input type="submit" value="Let the magic happen">
                     {% autoescape false %}

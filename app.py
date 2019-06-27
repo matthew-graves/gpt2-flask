@@ -13,7 +13,6 @@ class ReusableForm(Form):
     @app.route("/", methods=['GET', 'POST'])
     def hello():
         form = ReusableForm(request.form)
-        print(form.errors)
         result_text = ''
         if request.method == 'POST':
             prompt = request.form['prompt']
@@ -21,6 +20,7 @@ class ReusableForm(Form):
 
             if form.validate():
                 result_text = run_model(prompt)
+                result_text = prompt + result_text
             else:
                 flash('All Fields Are Required')
 

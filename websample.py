@@ -54,10 +54,10 @@ def interact_model(
     elif length > hparams.n_ctx:
         raise ValueError("Can't get samples longer than window size: %s" % hparams.n_ctx)
 
-    with tf.Session(graph=tf.Graph()) as sess:
-        context = tf.placeholder(tf.int32, [batch_size, None])
+    with tf.compat.v1.Session(graph=tf.Graph()) as sess:
+        context = tf.compat.v1.placeholder(tf.int32, [batch_size, None])
         np.random.seed(seed)
-        tf.set_random_seed(seed)
+        tf.compat.v1.set_random_seed(seed)
         output = sample.sample_sequence(
             hparams=hparams, length=length,
             context=context,
@@ -65,7 +65,7 @@ def interact_model(
             temperature=temperature, top_k=top_k
         )
 
-        saver = tf.train.Saver()
+        saver = tf.compat.v1.train.Saver()
         ckpt = tf.train.latest_checkpoint(os.path.join(models_dir, model_name))
         saver.restore(sess, ckpt)
 
@@ -81,10 +81,11 @@ def interact_model(
             for i in range(batch_size):
                 generated += 1
                 text = enc.decode(out[i])
-                full_text += ("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40 + '\n')
+                #full_text += ("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40 + '\n')
                 #print(text)
                 full_text += text
                 full_text = "<br />". join(full_text.split("\n"))
+                full_text = full_text.split('<|endoftext|>', 1)[0]
         return full_text
 
 def run_model(prompt_parameter):
