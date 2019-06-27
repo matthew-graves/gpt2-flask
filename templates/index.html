@@ -42,7 +42,7 @@
                 <p style="color:#FFFFFF">Enter a writing prompt in the field below</p>
                 <form method="POST" action="/">
                     <div stype="width: 50%">
-                    {{ form.prompt.label }} {{ form.prompt }}    <input type="submit" value="Let the magic happen">
+                    {{ form.prompt.label(autocomplete="off") }} {{ form.prompt(autocomplete="off") }}    <input type="submit" value="Let the magic happen">
                 </div>
                     {% autoescape false %}
                         <p style="color:#FFFFFF;size:12px">{{result_text}}</p>

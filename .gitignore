@@ -4,5 +4,6 @@ __pycache__*
 # exclude everything
 models/*
 
+upload.sh
 # exception to the rule
 !models/.gitkeep 
