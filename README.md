@@ -1,21 +1,21 @@
 # gpt2-flask
 Nonsense Flask App for GPT-2 Phrase Generator
 
-Instructions for use:
+**Instructions for use:**
 
 Recommend using virtualenv over systemwide installs
 
-#Create Virtual Environment
+**Create Virtual Environment:**
 Create new venv with python3 -m venv "environment name"
 
-**Activate Virtual Env**
+**Activate Virtual Env:**
 source "environment name"/env/activate
 #to deactivate, type deactivate
 
-**Install python packages via pip**
+**Install python packages via pip:**
 pip3 install -r requirements.txt
 
-**download 345M Model to models folder**
+**download 345M Model to models folder:**
 See instructions: https://github.com/openai/gpt-2
 
 Place 345M folder in models folder
