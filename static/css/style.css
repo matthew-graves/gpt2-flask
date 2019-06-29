@@ -262,7 +262,7 @@ ul, li {
 	display: table;
 	width: 100%;
 	height: 100vh;
-	background: no-repeat 0 0 / cover;
+	background: url('/static/images/banner.jpg') no-repeat 0 0 / cover;
 	background-attachment: fixed;
 }
 #HeroBanner .hero-content {
