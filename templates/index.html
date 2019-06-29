@@ -20,12 +20,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/favicons/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- favicons -->
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom-responsive-style.css') }}">
     <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -33,10 +31,10 @@
     <script type="text/javascript" src="{{ url_for('static', filename='script/all-plugins.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='script/plugin-active.js') }}"></script>
 </head>
-<body data-spy="scroll" data-target=".main-navigation" data-offset="150">
+<body data-spy="scroll" data-target=".main-navigation" data-offset="150" background="{{ url_for('static', filename='images/banner.jpg')}}">
     <section id="MainContainer">
         <section id="HeroBanner">
-            <div class="hero-content">
+            <div class="hero-content" background="{{ url_for('static', filename='images/banner.jpg')}}"">
                 <h1>Welcome to the world of GPT-2</h1>
                 <h2 style="color:#FFFFFF">rev 0.02b - Now with performance enhancers!</h2>
                 <p style="color:#FFFFFF">Enter a writing prompt in the field below</p>
