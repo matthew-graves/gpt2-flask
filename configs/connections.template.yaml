@@ -1,0 +1,11 @@
+# Rename to connections.yaml to use
+
+# change to false to not save generated text to database
+usemysql: True
+
+# Connection String Details
+mysql:
+  host: localhost
+  user: username
+  password: securepassword
+  dbname: databasename

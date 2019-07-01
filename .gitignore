@@ -7,3 +7,5 @@ models/*
 upload.sh
 # exception to the rule
 !models/.gitkeep 
+
+configs/connections.yaml
