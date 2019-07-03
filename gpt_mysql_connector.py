@@ -70,7 +70,7 @@ def get_gpt_prompt(guid):
     if cfg['usemysql']:
         if available:
             gptcursor = gptdb.cursor()
-            select_query = "SELECT response FROM archive WHERE guid = %s"
+            select_query = "SELECT prompt, response FROM archive WHERE guid = %s"
             guid_s = (guid, )
             try:
                 gptcursor.execute(select_query, guid_s)

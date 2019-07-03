@@ -34,14 +34,17 @@
         <section id="HeroBanner">
             <div class="hero-content">
                 <h1>Welcome to the world of GPT-2</h1>
-                <h2 style="color:#FFFFFF">rev 0.03 - Now with shareable links!</h2>
+                <h2 style="color:#FFFFFF">rev 0.04 - Now with highlighted prompts!</h2>
                 <p style="color:#FFFFFF">Enter a writing prompt in the field below</p>
                 <form method="POST" action="/">
                     <div stype="width: 50%">
-                    {{ form.prompt.label(autocomplete="off") }} {{ form.prompt(autocomplete="off") }}    <input type="submit" value="Let the magic happen">
-                </div>
+                        {{ form.prompt.label(autocomplete="off") }}
+                        {{ form.prompt(autocomplete="off") }}
+                        <input type="submit" value="Let the magic happen">
+                    </div>
                     {% autoescape false %}
-                        <p style="color:#FFFFFF;size:12px">{{result_text}}</p>
+                        <p style ="font-style: italic;color:rgb(148, 148, 148);size:12px;display:inline">{{prompt_text}}</p>
+                        <p style="color:#FFFFFF;size:12px;display:inline">{{result_text}}</p>
                     {% endautoescape %}
                 </form>
             </div>
