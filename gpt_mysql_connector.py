@@ -76,7 +76,7 @@ def get_gpt_prompt(guid):
                 gptcursor.execute(select_query, guid_s)
                 text = gptcursor.fetchone()
                 if (text):
-                    return text[0], True
+                    return text[0],text[1], True
                 else:
                     return "Entry Not Found", True
             except Exception as e:
