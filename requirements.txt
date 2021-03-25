@@ -21,7 +21,7 @@ MarkupSafe==1.1.1
 mysql.connector
 numpy==1.16.4
 protobuf==3.8.0
-PyYAML==5.1.1
+PyYAML==5.4
 regex==2017.4.5
 requests==2.21.0
 six==1.12.0
